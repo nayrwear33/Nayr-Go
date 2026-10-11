@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Nayr Go - Votre service de courses et livraisons à Meknès.">
+  <title>Nayr Go | Meknès</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#">NAYR<span>GO</span></a>
+    <button id="langBtn" type="button" aria-label="Change language">العربية</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow" data-i18n="eyebrow">VOTRE TEMPS COMPTE</p>
+      <h1 data-i18n="title">On s'occupe de vos courses.</h1>
+      <p class="subtitle" data-i18n="subtitle">
+        Un service de proximité à Meknès. Vous demandez, notre équipe s'en charge.
+      </p>
+      <div class="location">📍 <span data-i18n="location">Meknès, Maroc</span></div>
+    </section>
+
+    <section class="order-card">
+      <h2 data-i18n="formTitle">Demander une course</h2>
+      <p class="form-intro" data-i18n="formIntro">
+        Remplissez les informations ci-dessous.
+      </p>
+
+      <form id="orderForm">
+        <label for="customer" data-i18n="nameLabel">Votre nom</label>
+        <input id="customer" name="customer" required
+          placeholder="Nom complet" data-i18n-placeholder="namePlaceholder">
+
+        <label for="service" data-i18n="serviceLabel">Type de service</label>
+        <select id="service" name="service" required>
+          <option value="" data-i18n="servicePlaceholder">Choisir un service</option>
+          <option value="Achats" data-i18n="shopping">Achats et courses</option>
+          <option value="Livraison" data-i18n="delivery">Récupération et livraison</option>
+          <option value="Documents" data-i18n="documents">Documents et démarches</option>
+          <option value="Autre" data-i18n="other">Autre demande</option>
+        </select>
+
+        <label for="district" data-i18n="districtLabel">Quartier à Meknès</label>
+        <input id="district" name="district" required
+          placeholder="Ex. Hamria, Toulal..." data-i18n-placeholder="districtPlaceholder">
+
+        <label for="address" data-i18n="addressLabel">Adresse de livraison</label>
+        <input id="address" name="address" required
+          placeholder="Adresse complète" data-i18n-placeholder="addressPlaceholder">
+
+        <label for="details" data-i18n="detailsLabel">Détails de la demande</label>
+        <textarea id="details" name="details" rows="4" required
+          placeholder="Décrivez ce dont vous avez besoin..."
+          data-i18n-placeholder="detailsPlaceholder"></textarea>
+
+        <label for="payment" data-i18n="paymentLabel">Mode de paiement souhaité</label>
+        <select id="payment" name="payment" required>
+          <option value="Espèces" data-i18n="cash">Espèces à la livraison</option>
+          <option value="En ligne" data-i18n="online">Paiement en ligne (à confirmer)</option>
+        </select>
+
+        <div class="fee">
+          <span data-i18n="feeLabel">Frais de service</span>
+          <strong data-i18n="feeValue">À confirmer</strong>
+        </div>
+
+        <button class="submit-btn" type="submit" data-i18n="submit">
+          Envoyer la demande sur WhatsApp
+        </button>
+        <p class="small-note" data-i18n="note">
+          Votre demande sera préparée dans WhatsApp. Vous devrez confirmer l'envoi.
+        </p>
+        <p id="status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="how">
+      <h2 data-i18n="howTitle">Comment ça marche ?</h2>
+      <div class="steps">
+        <article><span>01</span><h3 data-i18n="step1Title">Vous demandez</h3><p data-i18n="step1Text">Décrivez votre besoin.</p></article>
+        <article><span>02</span><h3 data-i18n="step2Title">On confirme</h3><p data-i18n="step2Text">Nous confirmons les détails et le prix.</p></article>
+        <article><span>03</span><h3 data-i18n="step3Title">On s'en occupe</h3><p data-i18n="step3Text">Un coursier prend en charge la demande.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">NAYR<span>GO</span></a>
+    <p data-i18n="footer">Service de proximité à Meknès.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
